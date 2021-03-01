@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="css/keyboard.css">
+
+</head>
+<body>
+
+    <div class="virtual-keyboard"></div>
+
+
+    <div class="col-md-6">
+        <div class="icon-box">
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    
+           <div 
+           lass="use-keyboard-input" 
+           id="webchat"
+            role="main"
+             style=' width: 100%; min-height: 550px; border: 5px solid #280a2c;border-radius: 8px;'></div>
+              
+    
+    <script>
+        (async function() {
+      
+      window.WebChat.renderWebChat(
+        {
+          directLine: window.WebChat.createDirectLine({ token : 'yr8zwQgK3Fg.ZRCm4SlIOy9RdK9KfNa-ARfb1OpPkcWAN_fqWCXClz8' }),
+          webSpeechPonyfillFactory: window.WebChat.createBrowserWebSpeechPonyfillFactory(),
+        },
+        document.getElementById('webchat')
+      );
+      document.querySelector('#webchat > *').focus();
+      document.querySelector('#webchat').firstChild.firstChild.firstChild.nextSibling.firstChild.style.display="none"
+    })().catch(err => console.error(err));
+
+
+    </script>
+       
+       </div>
+       </div>
+       
+       
+       <script type="text/javascript" src="scripts/keyboard-initializer.js"></script>
+        <script type="text/javascript" src="scripts/keyboard-handler.js"></script>
+        
+</body>
+</html>
